@@ -1,0 +1,105 @@
+/* General styling for the entire page */
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+  
+  /* Container for all movies */
+  .home-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  .theatre-movies{
+    width: 100%; /* Each section takes one-third of the container minus margin */
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    white-space: nowrap;
+  }
+  /* Section for all trending and theatre movies */
+  .all-movies,  .popular-movies {
+    width: 100%; /* Each section takes one-third of the container minus margin */
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent wrapping to new lines */
+  }
+  
+  /* Styling for the top section in each movie category */
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .top h4 {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #333;
+    border-left: 5px solid #ff9900;
+    padding-left: 10px;
+  }
+  
+  .view-all {
+    color: #ff9900;
+    cursor: pointer;
+  }
+  
+  /* Styling for each movie thumbnail */
+  .movie {
+    display: inline-block; /* Display movies in a row */
+    width: 180px;
+    margin-right: 10px; /* Add space between movies */
+    vertical-align: top; /* Align movies at the top */
+  }
+  
+  /* Styling for movie cover image */
+  .movie .cover img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  /* Styling for movie details */
+  .movie .detail {
+    margin-top: 5px;
+  }
+  
+  .movie .detail .name {
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  /* Styling for movie rating */
+  .rating {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+  }
+  
+  .rating .rating-value {
+    margin-left: 5px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Media query for responsiveness */
+  @media (max-width: 1024px) {
+    .home-container {
+      flex-direction: column;
+    }
+  
+    .all-movies, .theatre-movies, .popular-movies {
+      width: 100%;
+    }
+  }
+  
